@@ -1,0 +1,25 @@
+Get Photo
+
+Railingo.attributemodals.aggregate([
+{
+  $match:{$or: [
+    { _id: ObjectId("64cce009c5a421f39e767ce0") },
+    { _id: ObjectId("64cce01ac5a421f39e767cfc") },
+  ]},
+},
+
+{$unwind:{
+  path: "$OptionsValue",
+}},
+
+{$match:{
+  $or:[{"Name":"Layer1","OptionsValue.Name":"Black"},{"Name":"Layer2","OptionsValue.Name":"Brown"}]
+}},
+{$addFields:{
+  Photo: "$OptionsValue.Photo"
+}},
+{$project:
+{
+  Photo:1
+}}
+])

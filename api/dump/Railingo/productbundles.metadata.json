@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"url":{"$numberInt":"1"}},"name":"url_1","background":true,"unique":true}],"uuid":"a07d8cb5080f4025abad0a6b5d4e8f73","collectionName":"productbundles","type":"collection"}
